@@ -1,0 +1,28 @@
+#!/bin/sh
+
+set -e
+
+echo "Installing dependencies..."
+sudo apt-get update
+sudo apt-get install -y build-essential libx11-dev libxinerama-dev sharutils suckless-tools git
+echo "Done."
+
+echo "Installing suckless software from source..."
+git clone git@github.com:kimlai/suckless && cd suckless
+git submodule update --init
+
+patch -d dwm -p1 < patches/dwm/config.diff
+patch -p1 -d st < patches/st/no-bold-colors.diff
+patch -p1 -d st < patches/st/solarized-dark.diff
+patch -p1 -d st < patches/st/config.diff
+
+for app in slock dmenu st dwm
+do
+    sudo make -C $app clean install
+done
+echo "Done."
+
+echo "Installing the new xsession"
+sudo cp -v xsession/dwm.desktop /usr/share/xsessions
+sudo cp -v xsession/dwm-init /usr/local/bin/
+echo "Done"

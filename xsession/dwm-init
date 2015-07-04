@@ -1,0 +1,13 @@
+#!/bin/sh
+
+setxkbmap fr
+xautolock -time 1 -locker slock &
+
+# status bar
+while true
+do
+    xsetroot -name "$(date "+%A %d %B - %H:%M")"
+    sleep 1m
+done &
+
+dwm

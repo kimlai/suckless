@@ -1,0 +1,12 @@
+[submodule "slock"]
+	path = slock
+	url = git://git.suckless.org/slock
+[submodule "dmenu"]
+	path = dmenu
+	url = git://git.suckless.org/dmenu
+[submodule "st"]
+	path = st
+	url = git://git.suckless.org/st
+[submodule "dwm"]
+	path = dwm
+	url = git://git.suckless.org/dwm

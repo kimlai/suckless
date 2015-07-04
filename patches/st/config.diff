@@ -1,0 +1,11 @@
+--- a/config.def.h	2015-07-02 00:02:01.121347180 +0200
++++ b/config.def.h	2015-07-02 00:01:35.789348309 +0200
+@@ -5,7 +5,7 @@
+  *
+  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
+  */
+-static char font[] = "Liberation Mono:pixelsize=12:antialias=false:autohint=false";
++static char font[] = "Droid Sans Mono:pixelsize=18:antialias=true:autohint=true";
+ static int borderpx = 2;
+ static char shell[] = "/bin/sh";
+ static char *utmp = NULL;
