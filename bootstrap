@@ -4,7 +4,7 @@ set -e
 
 echo "Installing dependencies..."
 sudo apt-get update
-sudo apt-get install -y build-essential libx11-dev libxinerama-dev sharutils suckless-tools git
+sudo apt-get install -y build-essential libx11-dev libxft-dev libxrandr-dev libxinerama-dev sharutils suckless-tools git
 echo "Done."
 
 echo "Installing suckless software from source..."
